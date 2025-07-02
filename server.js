@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // フロントエンドの静的ファイルを提供 (index.html, style.css, script.js)
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 // APIエンドポイント (これはダミーです。実際のロジックに合わせてください)
 app.post('/fortune', (req, res) => {
@@ -27,7 +27,7 @@ app.post('/fortune', (req, res) => {
 
 // API以外のすべてのGETリクエストに対してindex.htmlを返す
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', 'index.html'));
 });
 
 app.listen(port, () => {
