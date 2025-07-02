@@ -26,7 +26,7 @@ app.post('/fortune', (req, res) => {
 });
 
 // API以外のすべてのGETリクエストに対してindex.htmlを返す
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'index.html'));
 });
 
