@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳥占い</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>今日の鳥占い</h1>
+        <div id="point-display">現在のポイント: 0</div>
+        <button id="fortune-button">運勢を占う</button>
+        <div id="result">
+            <p id="fortune-text"></p>
+            <div id="bird-image"></div>
+        </div>
+        <button id="trivia-button">鳥ビア</button>
+        <div id="trivia-result">
+            <p id="trivia-text"></p>
+            <button id="save-trivia-button" style="display: none;">この鳥ビアを保存する (1ポイント)</button>
+        </div>
+
+        <div id="janken-section">
+            <h2>じゃんけんチャレンジ</h2>
+            <p>3回連続で勝つと、もう一度占いができます！</p>
+            <div id="janken-buttons">
+                <button class="janken-button" data-hand="rock">グー</button>
+                <button class="janken-button" data-hand="scissors">チョキ</button>
+                <button class="janken-button" data-hand="paper">パー</button>
+            </div>
+            <div id="janken-result">
+                <p id="janken-result-text"></p>
+                <p id="win-streak-text">現在の連勝数: 0</p>
+            </div>
+        </div>
+
+        <div id="trivia-collection-section">
+            <h2>鳥ビア図鑑</h2>
+            <div id="trivia-collection-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
